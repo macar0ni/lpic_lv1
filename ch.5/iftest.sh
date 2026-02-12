@@ -1,0 +1,7 @@
+#!
+if [ -f $1 ]
+then
+ echo "$1 is regular file"
+else
+ echo "$1 isn't regular file"
+fi
