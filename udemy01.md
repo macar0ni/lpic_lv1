@@ -554,8 +554,8 @@ default.target    起動直後のOS動作モード。ほかのtargetへリンク
 poweroff.target   システム停止状態
 rescue.target     rootユーザーの未ログインできる状態
 multi-user.target 複数の一般ユーザーがログインできる状態、CUI
-graphical.target  複数の一般ユーザーがログインできる状態、GUI
 reboot.target     再起動の状態
+graphical.target  複数の一般ユーザーがログインできる状態、GUI
 emergency.target  緊急モード
 
 基本的に
@@ -643,3 +643,24 @@ lspciで表示できること
 ・ベンダー情報
 ・IRQ
 ・PCIバス速度
+
+
+
+エスケープ文字\とは、つぎの1文字の特別な意味を打ち消す。
+
+h 左
+j 下
+k 上
+l 右
+
+0 行頭
+$ 行後ろ
+gg ファイルの1行目
+G  ファイルの最終行
+10G ファイルの10行
+
+echoはそのままだとエスケープ文字を認識しない
+echo "A\tB"だと、A\tBとそのまま出る。
+
+alias ll='ls -l'
+エイリアス指定方法は''シングルクォーテーション
